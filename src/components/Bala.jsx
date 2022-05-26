@@ -1,7 +1,9 @@
-import seaPlaners from './Masyvas'
+function Bala({ seaPlaners }) {
+  return seaPlaners.map((v, i) => (
+    <div key={i}>
+      {v.id} {v.type} <span style={{ color: v.color }}>{v.name}</span> {v.color}
+    </div>
+  ));
+}
 
-  function Bala() {
-    return seaPlaners.map((v, i) => <div key={i}>{v.id} {v.type} <span style={{color: v.color}}>{v.name}</span> {v.color}</div>)
-    }
-
-  export default Bala;
+export default Bala;
